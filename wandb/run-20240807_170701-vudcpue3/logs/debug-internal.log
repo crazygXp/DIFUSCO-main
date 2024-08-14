@@ -1,0 +1,72 @@
+2024-08-07 17:07:01,222 INFO    StreamThr :8016 [internal.py:wandb_internal():90] W&B internal server running at pid: 8016, started at: 2024-08-07 17:07:01.222754
+2024-08-07 17:07:01,225 DEBUG   HandlerThread:8016 [handler.py:handle_request():144] handle_request: status
+2024-08-07 17:07:01,225 INFO    WriterThread:8016 [datastore.py:open_for_write():85] open: C:\Users\Dell\Desktop\DIFUSCO-main\wandb\run-20240807_170701-vudcpue3\run-vudcpue3.wandb
+2024-08-07 17:07:01,227 DEBUG   SenderThread:8016 [sender.py:send():334] send: header
+2024-08-07 17:07:01,227 DEBUG   SenderThread:8016 [sender.py:send():334] send: run
+2024-08-07 17:07:02,652 ERROR   SenderThread:8016 [internal_api.py:execute():244] 403 response executing GraphQL.
+2024-08-07 17:07:02,652 ERROR   SenderThread:8016 [internal_api.py:execute():245] {"errors":[{"message":"permission denied","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}],"data":{"upsertBucket":null}}
+2024-08-07 17:07:03,244 INFO    WriterThread:8016 [datastore.py:close():299] close: C:\Users\Dell\Desktop\DIFUSCO-main\wandb\run-20240807_170701-vudcpue3\run-vudcpue3.wandb
+2024-08-07 17:07:03,244 INFO    HandlerThread:8016 [handler.py:finish():841] shutting down handler
+2024-08-07 17:07:03,245 ERROR   StreamThr :8016 [internal.py:wandb_internal():175] Thread SenderThread:
+Traceback (most recent call last):
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\lib\retry.py", line 128, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal_api.py", line 241, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\transport\requests.py", line 39, in execute
+    request.raise_for_status()
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\apis\normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal_api.py", line 1596, in upsert_run
+    **kwargs,
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal_api.py", line 216, in gql
+    **kwargs,
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\lib\retry.py", line 144, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\util.py", line 1065, in check_retry_fn
+    return fallback_retry_fn(e)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\util.py", line 1012, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal_util.py", line 49, in run
+    self._run()
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal_util.py", line 100, in _run
+    self._process(record)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal.py", line 329, in _process
+    self._sm.send(record)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\sender.py", line 341, in send
+    send_handler(record)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\sender.py", line 927, in send_run
+    self._init_run(run, config_value_dict)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\sender.py", line 969, in _init_run
+    commit=run.git.commit or None,
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\apis\normalize.py", line 64, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\apis\normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal_api.py", line 1596, in upsert_run
+    **kwargs,
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\internal\internal_api.py", line 216, in gql
+    **kwargs,
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\sdk\lib\retry.py", line 144, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\util.py", line 1065, in check_retry_fn
+    return fallback_retry_fn(e)
+  File "E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\wandb\util.py", line 1012, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access

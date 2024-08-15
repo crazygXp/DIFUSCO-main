@@ -1,4 +1,6 @@
 """The handler for training and evaluation."""
+# export HTTPS_PROXY="http://10.10.1.100.1080"
+# export https_proxy="http://10.10.1.100.1080"
 
 import os
 from argparse import ArgumentParser
@@ -14,6 +16,13 @@ from pytorch_lightning.utilities import rank_zero_info
 
 from pl_tsp_model import TSPModel
 from pl_mis_model import MISModel
+
+# 自己修改的 还是不行
+os.environ["HTTP_PROXY"] ="http://127.0.0.1:7890"
+os.environ["HTTPS_PROXY"] ="http://127.0.0.1:7890"
+os.environ["WANDB_API_KEY"] = 'a33fcdfe4ab02b1301e8424a89f912706be00e40'
+os.environ["WANDB_MODE"] = "offline"
+
 
 
 def arg_parser():
@@ -33,7 +42,7 @@ def arg_parser():
   parser.add_argument('--weight_decay', type=float, default=0.0)
   parser.add_argument('--lr_scheduler', type=str, default='constant')
 
-  parser.add_argument('--num_workers', type=int, default=1) # 这里有问题
+  parser.add_argument('--num_workers', type=int, default=1) # 线程数  这里有问题
   parser.add_argument('--fp16', action='store_true')
   parser.add_argument('--use_activation_checkpoint', action='store_true')
 
@@ -51,7 +60,7 @@ def arg_parser():
   parser.add_argument('--sparse_factor', type=int, default=-1)
   parser.add_argument('--aggregation', type=str, default='sum')
   parser.add_argument('--two_opt_iterations', type=int, default=1000)
-  parser.add_argument('--save_numpy_heatmap', action='store_true')
+  parser.add_argument('--save_numpy_heatmap', action='store_true') # 热图的位置不知道
 
   parser.add_argument('--project_name', type=str, default='tsp_diffusion')
   parser.add_argument('--wandb_entity', type=str, default=None)

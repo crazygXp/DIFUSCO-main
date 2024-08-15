@@ -1,0 +1,83 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.7.16",
+    "heartbeatAt": "2024-08-14T05:37:13.891453",
+    "startedAt": "2024-08-14T05:37:13.820143",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--task",
+        "tsp",
+        "--wandb_logger_name",
+        "tsp_diffusion_graph_categorical_tsp50",
+        "--diffusion_type",
+        "categorical",
+        "--do_train",
+        "--do_test",
+        "--learning_rate",
+        "0.0002",
+        "--weight_decay",
+        "0.0001",
+        "--lr_scheduler",
+        "cosine-decay",
+        "--storage_path",
+        "C:/Program Files/Git/result",
+        "--training_split",
+        "C:\\Users\\Dell\\Desktop\\DIFUSCO-main\\data\\tsp50-50_concorde.txt",
+        "--validation_split",
+        "C:\\Users\\Dell\\Desktop\\DIFUSCO-main\\data\\tsp50-50_concorde.txt",
+        "--test_split",
+        "C:\\Users\\Dell\\Desktop\\DIFUSCO-main\\data\\tsp50-50_concorde.txt",
+        "--batch_size",
+        "64",
+        "--num_epochs",
+        "50",
+        "--validation_examples",
+        "8",
+        "--inference_schedule",
+        "cosine",
+        "--inference_diffusion_steps",
+        "50"
+    ],
+    "state": "running",
+    "program": "difusco/train.py",
+    "codePath": "difusco\\train.py",
+    "git": {
+        "remote": "git@github.com:crazygXp/DIFUSCO-main.git",
+        "commit": "f2aa8a719c45c48c68f94ac5115739f1ed7b9a48"
+    },
+    "email": "2107736797@qq.com",
+    "root": "C:/Users/Dell/Desktop/DIFUSCO-main",
+    "host": "DESKTOP-4A8JCVK",
+    "username": "Dell",
+    "executable": "E:\\Program Files (x86)\\anaconda\\envs\\DIFUSCO\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3912.0,
+        "min": 0.0,
+        "max": 3912.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3912.0,
+            "min": 0.0,
+            "max": 3912.0
+        }
+    ],
+    "disk": {
+        "total": 237.66364288330078,
+        "used": 110.09726333618164
+    },
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3090",
+            "memory_total": 25769803776
+        }
+    ],
+    "memory": {
+        "total": 31.801822662353516
+    }
+}

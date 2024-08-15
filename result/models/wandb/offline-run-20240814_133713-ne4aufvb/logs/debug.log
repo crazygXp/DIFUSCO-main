@@ -1,0 +1,22 @@
+2024-08-14 13:37:13,821 INFO    MainThread:7556 [wandb_setup.py:_flush():68] Configure stats pid to 7556
+2024-08-14 13:37:13,821 INFO    MainThread:7556 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Dell\.config\wandb\settings
+2024-08-14 13:37:13,821 INFO    MainThread:7556 [wandb_setup.py:_flush():68] Loading settings from C:\Users\Dell\Desktop\DIFUSCO-main\wandb\settings
+2024-08-14 13:37:13,821 INFO    MainThread:7556 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True', 'api_key': '***REDACTED***', 'mode': 'offline'}
+2024-08-14 13:37:13,821 INFO    MainThread:7556 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'difusco\\train.py', 'program': 'difusco/train.py'}
+2024-08-14 13:37:13,823 INFO    MainThread:7556 [wandb_init.py:_log_setup():478] Logging user logs to C:/Program Files/Git/result\models\wandb\offline-run-20240814_133713-ne4aufvb\logs\debug.log
+2024-08-14 13:37:13,823 INFO    MainThread:7556 [wandb_init.py:_log_setup():479] Logging internal logs to C:/Program Files/Git/result\models\wandb\offline-run-20240814_133713-ne4aufvb\logs\debug-internal.log
+2024-08-14 13:37:13,824 INFO    MainThread:7556 [wandb_init.py:init():518] calling init triggers
+2024-08-14 13:37:13,824 INFO    MainThread:7556 [wandb_init.py:init():522] wandb.init called with sweep_config: {}
+config: {}
+2024-08-14 13:37:13,824 INFO    MainThread:7556 [wandb_init.py:init():571] starting backend
+2024-08-14 13:37:13,824 INFO    MainThread:7556 [wandb_init.py:init():575] setting up manager
+2024-08-14 13:37:13,826 INFO    MainThread:7556 [backend.py:_multiprocessing_setup():108] multiprocessing start_methods=spawn, using: spawn
+2024-08-14 13:37:13,829 INFO    MainThread:7556 [wandb_init.py:init():582] backend started and connected
+2024-08-14 13:37:13,830 INFO    MainThread:7556 [wandb_init.py:init():670] updated telemetry
+2024-08-14 13:37:13,855 INFO    MainThread:7556 [wandb_init.py:init():758] starting run threads in backend
+2024-08-14 13:37:18,988 INFO    MainThread:7556 [wandb_run.py:_console_start():2101] atexit reg
+2024-08-14 13:37:18,989 INFO    MainThread:7556 [wandb_run.py:_redirect():1959] redirect: SettingsConsole.WRAP_RAW
+2024-08-14 13:37:18,989 INFO    MainThread:7556 [wandb_run.py:_redirect():2024] Wrapping output streams.
+2024-08-14 13:37:18,989 INFO    MainThread:7556 [wandb_run.py:_redirect():2046] Redirects installed.
+2024-08-14 13:37:18,989 INFO    MainThread:7556 [wandb_init.py:init():798] run started, returning control to user process
+2024-08-14 16:07:10,883 WARNING MsgRouterThr:7556 [router.py:message_loop():77] message_loop has been closed

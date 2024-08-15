@@ -1,0 +1,295 @@
+Logging to C:/Program Files/Git/result\models/tsp_diffusion/ne4aufvb
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+----------------------------------------------------------------------------------------------------
+GNNEncoder(
+  (node_embed): Linear(in_features=256, out_features=256, bias=True)
+  (edge_embed): Linear(in_features=256, out_features=256, bias=True)
+  (pos_embed): PositionEmbeddingSine()
+  (edge_pos_embed): ScalarEmbeddingSine()
+  (time_embed): Sequential(
+    (0): Linear(in_features=256, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=128, bias=True)
+  )
+  (out): Sequential(
+    (0): GroupNorm32(32, 256, eps=1e-05, affine=True)
+    (1): ReLU()
+    (2): Conv2d(256, 2, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (layers): ModuleList(
+    (0): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (1): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (2): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (3): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (4): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (5): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (6): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (7): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (8): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (9): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (10): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+    (11): GNNLayer(
+      (U): Linear(in_features=256, out_features=256, bias=True)
+      (V): Linear(in_features=256, out_features=256, bias=True)
+      (A): Linear(in_features=256, out_features=256, bias=True)
+      (B): Linear(in_features=256, out_features=256, bias=True)
+      (C): Linear(in_features=256, out_features=256, bias=True)
+      (norm_h): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (norm_e): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    )
+  )
+  (time_embed_layers): ModuleList(
+    (0): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (1): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (2): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (3): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (4): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (5): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (6): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (7): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (8): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (9): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (10): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+    (11): Sequential(
+      (0): ReLU()
+      (1): Linear(in_features=128, out_features=256, bias=True)
+    )
+  )
+  (per_layer_out): ModuleList(
+    (0): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (1): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (2): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (3): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (4): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (5): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (6): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (7): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (8): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (9): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (10): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+    (11): Sequential(
+      (0): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+      (1): SiLU()
+      (2): Linear(in_features=256, out_features=256, bias=True)
+    )
+  )
+)
+----------------------------------------------------------------------------------------------------
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\torch\nn\parallel\distributed.py:1754: UserWarning: You passed find_unused_parameters=true to DistributedDataParallel, `_set_static_graph` will detect unused parameters automatically, so you do not need to set find_unused_parameters=true, just be sure these unused parameters will not change during training loop while calling `_set_static_graph`.
+  "You passed find_unused_parameters=true to DistributedDataParallel, "
+Parameters: 5333762
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\torch_geometric\deprecation.py:12: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+Training steps: 7800
+  | Name  | Type       | Params
+-------------------------------------
+0 | model | GNNEncoder | 5.3 M
+-------------------------------------
+5.3 M     Trainable params
+0         Non-trainable params
+5.3 M     Total params
+21.335    Total estimated model params size (MB)
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:241: PossibleUserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 12 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  category=PossibleUserWarning,
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\pytorch_lightning\trainer\connectors\logger_connector\result.py:233: UserWarning: You called `self.log('val/2opt_iterations', ...)` in your `validation_step` but the value needs to be floating point. Converting it to torch.float32.
+  f"You called `self.log({self.meta.name!r}, ...)` in your `{self.meta.fx}` but the value needs to"
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\torch_geometric\deprecation.py:12: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:241: PossibleUserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 12 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  category=PossibleUserWarning,
+`Trainer.fit` stopped: `max_epochs=50` reached.
+Restoring states from the checkpoint path at C:\Program Files\Git\result\models\tsp_diffusion_graph_categorical_tsp50\ne4aufvb\checkpoints\epoch=48-step=7644.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Loaded model weights from checkpoint at C:\Program Files\Git\result\models\tsp_diffusion_graph_categorical_tsp50\ne4aufvb\checkpoints\epoch=48-step=7644.ckpt
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\torch_geometric\deprecation.py:12: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\pytorch_lightning\trainer\connectors\data_connector.py:241: PossibleUserWarning: The dataloader, test_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 12 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  category=PossibleUserWarning,
+E:\Program Files (x86)\anaconda\envs\DIFUSCO\lib\site-packages\pytorch_lightning\trainer\connectors\logger_connector\result.py:233: UserWarning: You called `self.log('test/2opt_iterations', ...)` in your `test_step` but the value needs to be floating point. Converting it to torch.float32.
+  f"You called `self.log({self.meta.name!r}, ...)` in your `{self.meta.fx}` but the value needs to"
+Sanity Checking: 0it [00:00, ?it/s]Validation dataset size: 8
+Epoch 49: 100%|██████████████████████████████████████████████████████████████████████| 164/164 [00:50<00:00,  3.24it/s, loss=0.0277, v_num=ufvb, val/solved_cost=5.940]
+Test dataset size: 10000
+Testing DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████| 10000/10000 [1:47:35<00:00,  1.55it/s]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       Test metric             DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  test/2opt_iterations       7.364699840545654
+      test/gt_cost           5.696016784230185
+  test/merge_iterations          894.6856
+    test/solved_cost         5.835652552116016
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────

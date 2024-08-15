@@ -17,8 +17,17 @@ from torch_sparse import max as sparse_max
 import torch.utils.checkpoint as activation_checkpoint
 
 
+'''
+这个文件就是对各种特征进行的处理包括时间步以及原本特征还有位置编码
+针对稀疏图和非稀疏图的节点特征和边特征进行处理，包括聚合邻居特征、融合位置编码以及整合时间步特征
+如果要加傅里叶特征等就在这个文件加
+'''
+
 class GNNLayer(nn.Module):
-  """Configurable GNN Layer
+  """Configurable GNN Layer捕捉图的结构信息以及节点和边的特征信息
+
+  现了一个灵活的图神经网络层，能够根据输入的节点特征、边特征和图结构进行节点特征和边特征的更新、聚合和归一化处理，
+  支持稠密和稀疏数据的处理，并能够通过门控机制增强模型的表达能力。
   Implements the Gated Graph ConvNet layer:
       h_i = ReLU ( U*h_i + Aggr.( sigma_ij, V*h_j) ),
       sigma_ij = sigmoid( A*h_i + B*h_j + C*e_ij ),
